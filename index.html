@@ -4,20 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CharizardTube 🔥</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ 
   <!-- HEADER -->
   <header class="header">
     <div class="header-left">
       <i class="fas fa-bars menu-icon"></i>
-      <div class="logo">
-        <span class="flame">🔥</span>
-        <span>CharizardTube</span>
-      </div>
+      <a class="logo" href="#">
+        <div class="logo-icon">🔥</div>
+        <span class="logo-text">CharizardTube</span>
+      </a>
     </div>
-
     <div class="search-container">
       <div class="search-box">
         <input type="text" placeholder="Pesquisar Pokémon, batalhas, evoluções..." class="search-input">
@@ -25,28 +27,58 @@
       </div>
       <button class="mic-btn"><i class="fas fa-microphone"></i></button>
     </div>
-
     <div class="header-right">
-      <i class="fas fa-video create-btn"></i>
-      <i class="fas fa-th apps-btn"></i>
-      <i class="fas fa-bell notification-btn"></i>
+      <button class="icon-btn"><i class="fas fa-video"></i></button>
+      <button class="icon-btn">
+        <i class="fas fa-bell"></i>
+        <span class="notification-dot"></span>
+      </button>
       <div class="avatar">🐲</div>
     </div>
   </header>
-
+ 
   <div class="main-container">
     <!-- SIDEBAR -->
     <aside class="sidebar">
-      <nav>
-        <a href="#" class="active"><i class="fas fa-home"></i><span>Início</span></a>
-        <a href="#"><i class="fas fa-fire"></i><span>Em Chamas</span></a>
-        <a href="#"><i class="fas fa-dragon"></i><span>Mega Evoluções</span></a>
-        <a href="#"><i class="fas fa-bolt"></i><span>Batalhas Épicas</span></a>
-        <a href="#"><i class="fas fa-bookmark"></i><span>Minha Pokédex</span></a>
-      </nav>
+      <div class="sidebar-section">
+        <nav>
+          <a href="#" class="active"><i class="fas fa-home"></i><span>Início</span></a>
+          <a href="#"><i class="fas fa-fire"></i><span>Em Chamas</span></a>
+          <a href="#"><i class="fas fa-compass"></i><span>Explorar</span></a>
+          <a href="#"><i class="fas fa-bolt"></i><span>Batalhas</span></a>
+          <a href="#"><i class="fas fa-clock"></i><span>Assistidos</span></a>
+        </nav>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Inscrições</div>
+        <div class="sidebar-sub">
+          <div class="sub-avatar">🎮</div>
+          <span class="sub-name">Ash Ketchum TV</span>
+          <span class="sub-live"></span>
+        </div>
+        <div class="sidebar-sub">
+          <div class="sub-avatar">⚔️</div>
+          <span class="sub-name">PokéBattles BR</span>
+        </div>
+        <div class="sidebar-sub">
+          <div class="sub-avatar">🧬</div>
+          <span class="sub-name">PokéScience</span>
+        </div>
+        <div class="sidebar-sub">
+          <div class="sub-avatar">🏆</div>
+          <span class="sub-name">Liga Pokémon</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <nav>
+          <a href="#"><i class="fas fa-book"></i><span>Minha Pokédex</span></a>
+          <a href="#"><i class="fas fa-download"></i><span>Downloads</span></a>
+          <a href="#"><i class="fas fa-cog"></i><span>Configurações</span></a>
+        </nav>
+      </div>
     </aside>
-
-    <!-- CONTEÚDO PRINCIPAL -->
+ 
+    <!-- CONTENT -->
     <main class="content">
       <!-- CHIPS -->
       <div class="chips-container">
@@ -54,51 +86,153 @@
         <div class="chip">🔥 Fire Type</div>
         <div class="chip">🐲 Dragon</div>
         <div class="chip">Mega Evoluções</div>
-        <div class="chip">Batalhas lendárias</div>
+        <div class="chip">Batalhas Lendárias</div>
         <div class="chip">Charizard Only</div>
         <div class="chip">Ao vivo</div>
         <div class="chip">Pokémon GO</div>
+        <div class="chip">Competitivo</div>
+        <div class="chip">Shiny Hunting</div>
       </div>
-
-      <!-- GRID DE VÍDEOS -->
-      <div class="video-grid">
-        <div class="video-card">
-          <div class="thumbnail">
-            <img src="https://picsum.photos/id/1015/320/180" alt="thumbnail">
-            <span class="duration">15:42</span>
-          </div>
-          <div class="video-info">
-            <h3>Por que Charizard é o MELHOR Pokémon de todos os tempos 🔥</h3>
-            <p class="channel">Ash Ketchum TV</p>
-            <p class="views">1.2M visualizações • 2 dias atrás</p>
-          </div>
+ 
+      <!-- VIDEO SECTION -->
+      <div class="video-section">
+        <div class="section-title">
+          <span class="fire-accent"><i class="fas fa-fire"></i></span>
+          Recomendados para você
         </div>
-
-        <div class="video-card">
-          <div class="thumbnail">
-            <img src="https://picsum.photos/id/201/320/180" alt="thumbnail">
-            <span class="duration">09:18</span>
+        <div class="video-grid">
+ 
+          <!-- Card 1 -->
+          <div class="video-card">
+            <div class="thumbnail">
+              <img src="https://picsum.photos/seed/char1/640/360" alt="thumbnail">
+              <span class="duration">15:42</span>
+              <div class="progress-bar" style="width: 65%;"></div>
+            </div>
+            <div class="video-info">
+              <div class="channel-avatar">🎮</div>
+              <div class="video-meta">
+                <h3>Por que Charizard é o MELHOR Pokémon de todos os tempos 🔥</h3>
+                <div class="channel-name">Ash Ketchum TV <i class="fas fa-check-circle verified"></i></div>
+                <div class="video-stats">1.2M visualizações • 2 dias atrás</div>
+              </div>
+            </div>
           </div>
-          <div class="video-info">
-            <h3>Charizard Mega X vs Mega Y - Qual é mais forte?</h3>
-            <p class="channel">PokéBattles BR</p>
-            <p class="views">458K visualizações • 5 dias atrás</p>
+ 
+          <!-- Card 2 -->
+          <div class="video-card">
+            <div class="thumbnail">
+              <img src="https://picsum.photos/seed/char2/640/360" alt="thumbnail">
+              <span class="duration">09:18</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-avatar">⚔️</div>
+              <div class="video-meta">
+                <h3>Charizard Mega X vs Mega Y — Qual é mais forte? Análise completa</h3>
+                <div class="channel-name">PokéBattles BR <i class="fas fa-check-circle verified"></i></div>
+                <div class="video-stats">458K visualizações • 5 dias atrás</div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="video-card">
-          <div class="thumbnail">
-            <img src="https://picsum.photos/id/1005/320/180" alt="thumbnail">
-            <span class="duration">22:10</span>
+ 
+          <!-- Card 3 -->
+          <div class="video-card">
+            <div class="thumbnail">
+              <img src="https://picsum.photos/seed/char3/640/360" alt="thumbnail">
+              <span class="duration">22:10</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-avatar">✨</div>
+              <div class="video-meta">
+                <h3>Como capturar um Charizard Shiny em Pokémon Scarlet/Violet</h3>
+                <div class="channel-name">Game Freak Official <i class="fas fa-check-circle verified"></i></div>
+                <div class="video-stats">892K visualizações • 1 semana atrás</div>
+              </div>
+            </div>
           </div>
-          <div class="video-info">
-            <h3>Como capturar um Charizard Shiny em Pokémon Scarlet/Violet</h3>
-            <p class="channel">Game Freak Official</p>
-            <p class="views">892K visualizações • 1 semana atrás</p>
+ 
+          <!-- Card 4 -->
+          <div class="video-card">
+            <div class="thumbnail">
+              <img src="https://picsum.photos/seed/char4/640/360" alt="thumbnail">
+              <span class="live-badge">● AO VIVO</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-avatar">🏆</div>
+              <div class="video-meta">
+                <h3>CAMPEONATO MUNDIAL 2026 — Final ao vivo! Charizard domina o meta</h3>
+                <div class="channel-name">Liga Pokémon <i class="fas fa-check-circle verified"></i></div>
+                <div class="video-stats">34K assistindo agora</div>
+              </div>
+            </div>
           </div>
+ 
+          <!-- Card 5 -->
+          <div class="video-card">
+            <div class="thumbnail">
+              <img src="https://picsum.photos/seed/char5/640/360" alt="thumbnail">
+              <span class="duration">31:05</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-avatar">🧬</div>
+              <div class="video-meta">
+                <h3>A ciência por trás do Flamethrower — Quão quente é o fogo do Charizard?</h3>
+                <div class="channel-name">PokéScience</div>
+                <div class="video-stats">1.8M visualizações • 3 semanas atrás</div>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Card 6 -->
+          <div class="video-card">
+            <div class="thumbnail">
+              <img src="https://picsum.photos/seed/char6/640/360" alt="thumbnail">
+              <span class="duration">12:33</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-avatar">📊</div>
+              <div class="video-meta">
+                <h3>Tier List DEFINITIVA: Todos os forms do Charizard rankeados</h3>
+                <div class="channel-name">PokeRank</div>
+                <div class="video-stats">672K visualizações • 4 dias atrás</div>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Card 7 -->
+          <div class="video-card">
+            <div class="thumbnail">
+              <img src="https://picsum.photos/seed/char7/640/360" alt="thumbnail">
+              <span class="duration">08:47</span>
+              <div class="progress-bar" style="width: 30%;"></div>
+            </div>
+            <div class="video-info">
+              <div class="channel-avatar">🎨</div>
+              <div class="video-meta">
+                <h3>Desenhando Charizard com estilo realista — Speed Drawing</h3>
+                <div class="channel-name">PokéArt Studio</div>
+                <div class="video-stats">215K visualizações • 1 dia atrás</div>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Card 8 -->
+          <div class="video-card">
+            <div class="thumbnail">
+              <img src="https://picsum.photos/seed/char8/640/360" alt="thumbnail">
+              <span class="duration">45:20</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-avatar">📖</div>
+              <div class="video-meta">
+                <h3>A história COMPLETA do Charizard no anime — De Charmander a lenda</h3>
+                <div class="channel-name">PokéLore BR <i class="fas fa-check-circle verified"></i></div>
+                <div class="video-stats">2.3M visualizações • 2 meses atrás</div>
+              </div>
+            </div>
+          </div>
+ 
         </div>
       </div>
     </main>
   </div>
-</body>
-</html>
