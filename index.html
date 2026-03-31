@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
+
   <!-- HEADER -->
   <header class="header">
     <div class="header-left">
@@ -36,7 +36,7 @@
       <div class="avatar">🐲</div>
     </div>
   </header>
- 
+
   <div class="main-container">
     <!-- SIDEBAR -->
     <aside class="sidebar">
@@ -77,7 +77,7 @@
         </nav>
       </div>
     </aside>
- 
+
     <!-- CONTENT -->
     <main class="content">
       <!-- CHIPS -->
@@ -93,7 +93,7 @@
         <div class="chip">Competitivo</div>
         <div class="chip">Shiny Hunting</div>
       </div>
- 
+
       <!-- VIDEO SECTION -->
       <div class="video-section">
         <div class="section-title">
@@ -101,7 +101,7 @@
           Recomendados para você
         </div>
         <div class="video-grid">
- 
+
           <!-- Card 1 -->
           <div class="video-card">
             <div class="thumbnail">
@@ -118,7 +118,7 @@
               </div>
             </div>
           </div>
- 
+
           <!-- Card 2 -->
           <div class="video-card">
             <div class="thumbnail">
@@ -134,7 +134,7 @@
               </div>
             </div>
           </div>
- 
+
           <!-- Card 3 -->
           <div class="video-card">
             <div class="thumbnail">
@@ -150,7 +150,7 @@
               </div>
             </div>
           </div>
- 
+
           <!-- Card 4 -->
           <div class="video-card">
             <div class="thumbnail">
@@ -166,7 +166,7 @@
               </div>
             </div>
           </div>
- 
+
           <!-- Card 5 -->
           <div class="video-card">
             <div class="thumbnail">
@@ -182,7 +182,7 @@
               </div>
             </div>
           </div>
- 
+
           <!-- Card 6 -->
           <div class="video-card">
             <div class="thumbnail">
@@ -198,7 +198,7 @@
               </div>
             </div>
           </div>
- 
+
           <!-- Card 7 -->
           <div class="video-card">
             <div class="thumbnail">
@@ -215,7 +215,7 @@
               </div>
             </div>
           </div>
- 
+
           <!-- Card 8 -->
           <div class="video-card">
             <div class="thumbnail">
@@ -231,8 +231,29 @@
               </div>
             </div>
           </div>
- 
+
         </div>
       </div>
     </main>
   </div>
+
+  <script>
+    // Chip selection
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelector('.chip.active')?.classList.remove('active');
+        chip.classList.add('active');
+      });
+    });
+
+    // Sidebar link selection
+    document.querySelectorAll('.sidebar nav a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('.sidebar nav a').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
