@@ -1,0 +1,109 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1108;
+  color: #fff;
+}
+
+/* HEADER - Tema Charizard */
+.header {
+  height: 56px;
+  background: linear-gradient(90deg, #1a1108, #3d1e0f);
+  border-bottom: 3px solid #ff4500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 26px;
+  font-weight: 900;
+  color: #ff4500;
+  text-shadow: 0 0 10px #ff4500;
+}
+
+.flame { font-size: 32px; animation: flame 1.5s infinite alternate; }
+
+@keyframes flame { from { transform: scale(1); } to { transform: scale(1.15); } }
+
+/* Search */
+.search-container { display: flex; align-items: center; gap: 8px; flex: 1; max-width: 640px; margin: 0 40px; }
+.search-box { flex: 1; display: flex; border: 2px solid #ff4500; border-radius: 40px; overflow: hidden; background: #2a1c12; }
+.search-input { flex: 1; background: transparent; border: none; padding: 12px 20px; color: #fff; font-size: 16px; outline: none; }
+.search-btn { background: #ff4500; border: none; width: 64px; cursor: pointer; color: #fff; }
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #1a1108;
+  height: calc(100vh - 56px);
+  position: fixed;
+  padding-top: 12px;
+  border-right: 2px solid #ff4500;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 24px;
+  color: #ffcc99;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.sidebar nav a:hover, .sidebar nav a.active {
+  background: #ff4500;
+  color: #fff;
+}
+
+/* Chips */
+.chips-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 20px 24px 12px;
+  background: #1a1108;
+  border-bottom: 1px solid #3d1e0f;
+}
+
+.chip {
+  background: #3d1e0f;
+  padding: 10px 20px;
+  border-radius: 30px;
+  white-space: nowrap;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid #ff4500;
+}
+
+.chip.active {
+  background: #ff4500;
+  color: #1a1108;
+  font-weight: bold;
+}
+
+/* Vídeos */
+.content { margin-left: 240px; padding: 24px; }
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.video-card h3 { color: #ffcc99; }
+.channel { color: #ff9966; }
+
+/* Hover flame effect */
+.video-card:hover .thumbnail img {
+  filter: brightness(1.1) contrast(1.1);
+}
